@@ -66,3 +66,12 @@ body {
   background-position: center;
   font-family: Arial, sans-serif;
 }
+
+h3.error {
+  color: red;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  height: 16px;
+  text-align: center;
+}
