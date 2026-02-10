@@ -24,7 +24,18 @@ function registration() {
     sessionStorage.setItem("storedemail", registration_email);
     sessionStorage.setItem("storedpassword", registration_password);
     alert("Registration successful! Please log in.");
+    document.querySelector("#registration-name").value = "";
+    document.querySelector("#registration-email").value = "";
+    document.querySelector("#registration-password").value = "";
+    document.querySelector("#registration-confirm-password").value = "";
+
+    let registrationForm = document.querySelector(".registration-form");
+    let loginForm = document.querySelector(".box");
+    registrationForm.style.display = "none";
+    loginForm.style.display = "block";
   }
+
+  event.preventDefault();
 }
 function signupNavigation() {
   let loginForm = document.querySelector(".box");
