@@ -19,6 +19,11 @@ function registration() {
     registration_error.innerHTML = "Please confirm your password.";
   } else if (registration_password !== registration_confirm_password) {
     registration_error.innerHTML = "Passwords do not match.";
+  } else {
+    sessionStorage.setItem("storedname", registration_name);
+    sessionStorage.setItem("storedemail", registration_email);
+    sessionStorage.setItem("storedpassword", registration_password);
+    alert("Registration successful! Please log in.");
   }
 }
 function signupNavigation() {
